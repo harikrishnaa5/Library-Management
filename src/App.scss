@@ -1,0 +1,19 @@
+@import "./styles/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Work Sans", sans-serif;
+}
+.app {
+    height: 100vh;
+    @include center-list;
+    background-color: rgb(20, 41, 48);
+}

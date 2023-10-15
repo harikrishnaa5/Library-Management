@@ -1,0 +1,58 @@
+@import "../styles//mixins";
+
+.container{
+    padding: 2.5rem 2rem;
+    background-color: rgb(236, 226, 226);
+    @include vertical-list; 
+    @include box-shadow;
+    h2{
+        letter-spacing: 2px;
+    }
+
+    form{
+       @include vertical-list; 
+       align-items: center;
+        gap: 1.2rem;
+
+       .label-wrapper{
+        @include vertical-list;
+        gap: 5px;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 2px;
+        #input-date{
+            cursor: pointer;
+        }
+        input{
+            @include box-shadow;
+            padding:.8rem;
+            border: none;
+            width: 350px;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                letter-spacing: 2px
+            }
+        }
+        
+        
+       }
+       .btn{
+        @include box-shadow;
+        width: 100%;
+        border: none;
+        padding: .8rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        background-color: rgb(20, 41, 48);
+            color: white;
+        transition: 0.3s;
+        &:hover{
+            
+            background-color:rgb(39, 100, 120);
+            color:white;
+        }
+       }
+    }
+}
