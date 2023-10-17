@@ -1,12 +1,25 @@
 @import "../styles//mixins";
+@import "../styles/breakpoints";
 
 .container{
     padding: 2.5rem 2rem;
     background-color: rgb(236, 226, 226);
     @include vertical-list; 
     @include box-shadow;
+
+    // @include md{
+    //     padding: 10px 10px;
+    // }
+
+   
     h2{
         letter-spacing: 2px;
+        @include md{
+            font-size: 20px
+        }
+        @include sm{
+            font-size: 15px
+        }
     }
 
     form{
@@ -20,6 +33,13 @@
         font-weight: 600;
         font-size: 13px;
         letter-spacing: 2px;
+        @include md{
+            width: 100%;
+        }
+        @include sm{
+            width: 100%;
+            font-size: 10px;
+        }
         #input-date{
             cursor: pointer;
         }
@@ -32,7 +52,14 @@
                 outline: none;
             }
             &::placeholder{
-                letter-spacing: 2px
+                letter-spacing: 2px;
+                @include sm{
+                    font-size: 12px;
+                }
+            }
+
+            @include md{
+                width: 100%;
             }
         }
         
@@ -53,6 +80,31 @@
             background-color:rgb(39, 100, 120);
             color:white;
         }
+
+        @include md{
+            width: 100%;
+        }
+        @include sm{
+            font-size: 12px;
+        }
        }
+
+     @include md{
+        width: 100%;
+        padding: 0;
+     }
     }
+
+     //media query for responsiveness
+     @include md{
+        width: 60%;
+     }
+     @include sm{
+      width: 80%;
+     }
+    //  @include lg{
+    //     margin: 0 20px;
+    //     width: 27%;
+    //  }
+
 }
